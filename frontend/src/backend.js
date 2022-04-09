@@ -1,3 +1,3 @@
 export default {
-    link: 'http://localhost:8080/cep'
+    link: 'https://cepinfo-backend.herokuapp.com/cep'
 }
