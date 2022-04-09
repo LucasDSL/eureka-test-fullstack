@@ -6,12 +6,15 @@
     gap:10px;
     font-family: 'Arvo', serif;
     color: #F5F5F5;
+    height: fit-content;
 }
+
 .titleDescription > h1 {
     font-size: 9.6rem;
     font-style: italic;
     margin-top: 5rem;
 }
+
 .titleDescription > h3 {
     font-size: 3.6rem;
     font-style: italic;

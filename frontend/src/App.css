@@ -1,14 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital@0;1&display=swap');
-* {
-  margin: 0px; 
-  padding: 0px;
-  font-size: 62.5%;
-  background: linear-gradient(180deg, #0F365A 0%, rgba(16, 53, 90, 0.92) 50.52%, rgba(19, 22, 73, 0.174165) 82.15%, rgba(20, 15, 69, 0) 89.76%);
-}
 
-.App {
+*{
+  text-decoration: none;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  list-style: none;
+}
+html{
+  font-size: 62.5%;
+}
+.main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(180deg, #0F365A 0%, rgba(16, 53, 90, 0.92) 50.52%, rgba(19, 22, 73, 0.174165) 82.15%, rgba(20, 15, 69, 0) 89.76%);
   height: 100vh;
 }

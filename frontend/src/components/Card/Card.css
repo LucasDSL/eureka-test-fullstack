@@ -1,0 +1,22 @@
+.card { 
+    max-width: 50rem;
+    max-height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    color: black;
+    background: #FFFFFF;
+    border-radius: 15px;
+    margin-bottom: 2.5rem;
+    box-shadow: .1rem .1rem .1rem .1rem grey;
+    padding: 1rem;
+    gap: .5rem;
+}
+
+.card > a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-style: italic;
+    font-family: 'Arvo', serif;
+}
