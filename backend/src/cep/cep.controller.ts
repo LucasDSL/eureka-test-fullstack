@@ -1,6 +1,5 @@
 import {
   BadRequestException,
-  Body,
   Controller,
   Get,
   HttpCode,
@@ -9,7 +8,6 @@ import {
 } from '@nestjs/common';
 import { CepService } from './cep.service';
 import { CreateCepDto } from './dto/create-cep.dto';
-import { RequestCepDto } from './dto/request-cep.dto';
 
 @Controller('cep')
 export class CepController {

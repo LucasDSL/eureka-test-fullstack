@@ -1,10 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import axios from 'axios';
-import { create } from 'domain';
 import { Repository } from 'typeorm';
 import { CreateCepDto } from './dto/create-cep.dto';
-import { RequestCepDto } from './dto/request-cep.dto';
 import { Local } from './entities/local.entity';
 
 @Injectable()
