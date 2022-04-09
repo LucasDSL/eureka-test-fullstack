@@ -1,4 +1,7 @@
 .card { 
+    animation-name: card;
+    animation-duration: 5s;
+    animation-fill-mode: both;
     max-width: 50rem;
     max-height: max-content;
     display: flex;
@@ -12,7 +15,15 @@
     box-shadow: .1rem .1rem .1rem .1rem grey;
     padding: 1rem;
     gap: .5rem;
-    font-size: 1.8rem;
+    font-size: 2.4rem;
+}
+@keyframes card {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
 }
 
 .card > a {
@@ -22,3 +33,14 @@
     font-style: italic;
     font-family: 'Arvo', serif;
 }
+
+@media (max-width: 468px) {
+    .card {
+        text-align: center;
+        max-width: 20rem;
+        font-size: 1.8rem;
+    }
+}
+
+
+  

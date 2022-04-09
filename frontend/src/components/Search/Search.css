@@ -25,5 +25,6 @@
     font-size: 2.4rem;
     display: inline-block;
     width: fit-content;
-    
+    cursor: pointer;
+    box-shadow: .1rem .1rem .1rem .1rem grey;
 }
