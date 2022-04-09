@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
+import axios from 'axios';
 import { create } from 'domain';
 import { Repository } from 'typeorm';
 import { CreateCepDto } from './dto/create-cep.dto';
@@ -26,5 +27,10 @@ export class CepService {
     registerNewLocal(createCepDto: CreateCepDto) {
         const LocalModel = this.LocalRepo.create(createCepDto);
         return this.LocalRepo.save(LocalModel);
+    }
+
+    async getDataFromViaCep(cep: string) {
+        const viaCepResponse = await axios.get(`https://viacep.com.br/ws/${cep}/json/`)
+        return viaCepResponse.data
     }
 }

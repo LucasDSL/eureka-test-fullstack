@@ -1,5 +1,4 @@
-import { BadRequestException, Body, Controller, Get } from '@nestjs/common';
-import axios from 'axios';
+import { BadRequestException, Body, Controller, Get, HttpCode, HttpStatus } from '@nestjs/common';
 import { CepService } from './cep.service';
 import { CreateCepDto } from './dto/create-cep.dto';
 import { RequestCepDto } from './dto/request-cep.dto';
@@ -9,6 +8,7 @@ export class CepController {
   constructor(private readonly cepService: CepService) {}
 
   @Get()
+  @HttpCode(HttpStatus.OK)
   async getCep(@Body() requestCep: RequestCepDto){
     if (!this.cepService.isCEPValid(requestCep)) {
       throw new BadRequestException('Invalid CEP');
@@ -19,8 +19,8 @@ export class CepController {
     if(isThereCepInsideDb) {
       return isThereCepInsideDb;
     }
-    const cepResponse = await axios.get(`https://viacep.com.br/ws/${cepFormated}/json/`)
-    const cepData = await cepResponse.data
+    
+    const cepData = await this.cepService.getDataFromViaCep(cepFormated) 
     if(cepData.error) {
       throw new BadRequestException('CEP not found');
     }
