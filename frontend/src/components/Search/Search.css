@@ -25,4 +25,8 @@
     font-size: 2.4rem;
     display: inline-block;
     width: fit-content;
+    
+}
+.typeCEP > button:hover {
+    
 }

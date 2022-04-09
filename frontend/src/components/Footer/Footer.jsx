@@ -15,7 +15,7 @@ function Footer() {
     
   return (
     <div className="footer">
-      <Card key="foot" content={arrayContent} />
+      <Card contentFooter={arrayContent} />
     </div>
   )
 }
