@@ -1,0 +1,28 @@
+.search {
+    margin-top: .4rem;
+}
+
+.typeCEP {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    font-family: 'Arvo', serif;
+}
+
+.typeCEP > input {
+    border-radius: 1.5rem;
+    padding: 2rem 1rem;
+    color: black;
+    font-size: 2.0rem;
+    width: 20rem;
+}
+
+.typeCEP > button {
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    font-size: 2.4rem;
+    display: inline-block;
+    width: fit-content;
+}

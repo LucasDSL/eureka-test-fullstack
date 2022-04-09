@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from '../Card/Card'
-
+import './Footer.css'
 
 function Footer() {
   const arrayContent = [
