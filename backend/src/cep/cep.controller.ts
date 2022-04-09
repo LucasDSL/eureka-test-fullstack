@@ -29,4 +29,9 @@ export class CepController {
 
     return await this.cepService.registerNewLocal(newCep);
   }
+
+  @Get('all')
+  findAllCeps() {
+    return this.cepService.findAll()
+  }
 }

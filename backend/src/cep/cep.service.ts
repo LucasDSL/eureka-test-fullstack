@@ -33,4 +33,8 @@ export class CepService {
         const viaCepResponse = await axios.get(`https://viacep.com.br/ws/${cep}/json/`)
         return viaCepResponse.data
     }
+
+    findAll() {
+        return this.LocalRepo.find({take: 10, skip: 0});
+    }
 }
