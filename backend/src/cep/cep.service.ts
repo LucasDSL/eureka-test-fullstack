@@ -1,6 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
+import { create } from 'domain';
 import { Repository } from 'typeorm';
+import { CreateCepDto } from './dto/create-cep.dto';
 import { RequestCepDto } from './dto/request-cep.dto';
 import { Local } from './entities/local.entity';
 
@@ -8,13 +10,21 @@ import { Local } from './entities/local.entity';
 export class CepService {
     constructor(@InjectRepository(Local) private readonly LocalRepo: Repository<Local>){}
 
-    findLocalByCepDb(requestCepDto: RequestCepDto) {
-        const onlyNumbersCep = this.cleanCep(requestCepDto)
-        return this.LocalRepo.findOne({cep: onlyNumbersCep})
+    findLocalByCepDb(cep: string) {
+        return this.LocalRepo.findOne({cep});
+    }
+
+    isCEPValid(requestCepDto: RequestCepDto) {
+        const onlyNumbersCep = this.cleanCep(requestCepDto);
+        return onlyNumbersCep.length === 8 ? true : false;
     }
 
     cleanCep(requestCepDto: RequestCepDto) {
-        const onlyNumbersInsideString = requestCepDto.cep.replace(/\D/g, "")
-        return onlyNumbersInsideString
+        return requestCepDto.cep.replace(/\D/g, "");
+    }
+
+    registerNewLocal(createCepDto: CreateCepDto) {
+        const LocalModel = this.LocalRepo.create(createCepDto);
+        return this.LocalRepo.save(LocalModel);
     }
 }
