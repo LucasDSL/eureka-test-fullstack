@@ -4,7 +4,6 @@ export class CreateCepDto {
   city: string;
   stateAcronym: string;
   neighborhood: string;
-  visited = 1;
 
   constructor(viaCepObject) {
     this.cep = viaCepObject.cep.replace('-', '');
