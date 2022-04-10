@@ -54,6 +54,8 @@ npm start
 ### Tests
 There may be a small change on design, but funcionalities stays the same!
 
+In this link you may see the accessibility of the website. There I got a lot of insights of how to make the page more accessible, even though I didn't had time to make all the necessary changes.
+
 On the website, when asking for invalid ceps: 
 <div>
 <img src="./docs/invalidCep.png">
