@@ -20,9 +20,6 @@ export class Local {
     @Column()
     neighborhood: string;
 
-    @Column()
-    visited: number;
-
     @CreateDateColumn()
     createdAt: string;
 }
