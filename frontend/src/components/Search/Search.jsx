@@ -9,6 +9,15 @@ function Search() {
   const [currentCard, setCurrentCard] = useState(cardDefault)
   const [inputCEP, setInput] = useState(' ')
   
+  function changeCard(option, info=undefined) {
+    if(info) {
+      cardDefault = <Card option={option} info={info}/>
+      return setCurrentCard(cardDefault)
+    }
+    cardDefault = <Card option={option} />
+    return setCurrentCard(cardDefault)
+  }
+
   function getInput(event) {
     setInput(event.target.value)
   }
@@ -22,14 +31,12 @@ function Search() {
     if(!dataFromLocal) {
       return invalidCepProvided()
     }
-    cardDefault = <Card option='search' info={dataFromLocal}/>
-    setCurrentCard(cardDefault)
+    changeCard('search', dataFromLocal)
   }
   
 
   function invalidCepProvided() {
-    cardDefault  = <Card option='invalid' />
-    return setCurrentCard(cardDefault)
+    return changeCard('invalid')
   }
 
   return (
