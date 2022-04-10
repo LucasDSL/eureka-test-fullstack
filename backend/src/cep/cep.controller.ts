@@ -12,6 +12,11 @@ import { CreateCepDto } from './dto/create-cep.dto';
 @Controller('cep')
 export class CepController {
   constructor(private readonly cepService: CepService) {}
+  
+  @Get('/all')
+  findAllCeps() {
+    return this.cepService.findAll();
+  }
 
   @Get('/:cep')
   @HttpCode(HttpStatus.OK)
@@ -38,8 +43,4 @@ export class CepController {
     return await this.cepService.registerNewLocal(newCep);
   }
 
-  @Get('all')
-  findAllCeps() {
-    return this.cepService.findAll();
-  }
 }
