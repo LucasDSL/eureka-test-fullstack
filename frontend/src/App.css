@@ -17,6 +17,6 @@ html{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(179.48deg, #0F365A 45.4%, #C4C4C4 105.07%, #C0C1CA 105.08%);
+  background: linear-gradient(236deg,#0f365a, #c4c4c4);
   height: 100vh;
 }  
