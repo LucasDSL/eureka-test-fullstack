@@ -4,7 +4,7 @@ function Card(props){
   if(props.option === 'default') {
     return (
     <div className='card' >
-      <p>Busque por um cep acima!</p>
+      <p>Busque um CEP acima!</p>
     </div>)
   } 
   if(props.option === 'search') {
@@ -21,7 +21,7 @@ function Card(props){
   if(props.option === 'invalid') {
     return (
       <div className='card'>
-        <p> CEP inválido! </p>
+        <p> CEP inválido. </p>
         <p>Tente novamente!</p>
       </div>
     )
