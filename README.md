@@ -1,5 +1,4 @@
 # Eureka Labs' Tech Test 
-[Leia em português](README-portuguese.md)
 
 I followed this [planning](https://scientific-iridium-246.notion.site/Planning-for-Eureka-s-tech-test-99fe7b24d3a345a1a3bd4f370d7613b2) to make this project real.
 
@@ -46,13 +45,15 @@ You can make requests accordly to the [API documentation](https://documenter.get
 cd frontend
 npm install 
 ``` 
-- In the backend.js folder you have the option of changing the link of the backend, so you may use the local backend.
+- In the backend.js file you have the option of changing the link of the backend, so you may use the local backend.
 - Now run it: 
 ```terminal 
 npm start
 ```
 
 ### Tests
+There may be a small change on design, but funcionalities stays the same!
+
 On the website, when asking for invalid ceps: 
 <div>
 <img src="./docs/invalidCep.png">
