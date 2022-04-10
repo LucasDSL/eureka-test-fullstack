@@ -54,7 +54,7 @@ npm start
 ### Tests
 There may be a small change on design, but funcionalities stays the same!
 
-Here you can see the [accessibility](https://accessmonitor.acessibilidade.gov.pt/results/https:%2F%2Feureka-test-fullstack.vercel.app%2F) of the website. There I got a lot of insights on how to make the page more accessible, even though I didn't had time to make all the necessary changes.
+Here you can see the [accessibility](https://accessmonitor.acessibilidade.gov.pt/results/https:%2F%2Feureka-test-fullstack.vercel.app%2F) of the website. There I got a lot of insights on how to make the page more accessible, even though I didn't had time to make all the necessary features.
 
 On the website, when asking for invalid ceps: 
 <div>
