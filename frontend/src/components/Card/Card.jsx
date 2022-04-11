@@ -11,7 +11,7 @@ function Card(props){
     const info = props.info
     return (
       <div className='card'>
-          <p>Bairro: {info.neighborhood}</p>
+          <p>{info.neighborhood ? 'Bairro: ' + info.neighborhood : 'Microcidade sem bairros cadastrados.'}</p>
           <p>{info.patio}</p>
           <p>{info.city + ' - ' + info.stateAcronym} </p>
           <p></p>

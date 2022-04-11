@@ -7,7 +7,7 @@ import getData from "./getData"
 function Search() {
   let cardDefault = <Card option="default" />
   const [currentCard, setCurrentCard] = useState(cardDefault)
-  const [inputCEP, setInput] = useState(' ')
+  const [inputCEP, setInput] = useState('')
   
   function changeCard(option, info=undefined) {
     if(info) {
@@ -19,7 +19,7 @@ function Search() {
   }
 
   function getInput(event) {
-    setInput(event.target.value)
+    setInput(`${event.target.value}`)
   }
 
   async function getDataFromAPIChangeCard() {
@@ -42,7 +42,7 @@ function Search() {
   return (
     <div className='search'>
         <div className='typeCEP'>
-            <input onChange={getInput}title='Digite aqui seu CEP' type="string" placeholder="48.020-620"/>
+            <input onChange={getInput} title='Digite aqui seu CEP' type="number" placeholder="48020620" required />
             <button onClick={getDataFromAPIChangeCard}>Buscar</button>
         </div>
         <div>
