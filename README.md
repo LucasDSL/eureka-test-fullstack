@@ -2,6 +2,8 @@
 
 I followed this [planning](https://scientific-iridium-246.notion.site/Planning-for-Eureka-s-tech-test-99fe7b24d3a345a1a3bd4f370d7613b2) to make this project real.
 
+This website allows you to provide a CEP and search for the address related to it, using the backend api created for this purpose, this one using the [viacep](https://viacep.com.br/) api.
+
 ## 🛠 &nbsp;Tech Stack
 Backend: ![TypeScript](https://img.shields.io/badge/-TypeScript-05122A?style=flat&logo=typescript)&nbsp;
 ![Node.js](https://img.shields.io/badge/-NodeJs-05122A?style=flat&logo=node.js)&nbsp;
